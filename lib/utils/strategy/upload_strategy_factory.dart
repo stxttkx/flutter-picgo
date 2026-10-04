@@ -10,6 +10,7 @@ import 'package:flutter_picgo/utils/strategy/impl/smms_image_upload.dart';
 import 'package:flutter_picgo/utils/strategy/impl/tcyun_image_upload.dart';
 import 'package:flutter_picgo/utils/strategy/impl/upyun_image_upload.dart';
 import 'package:flutter_picgo/utils/strings.dart';
+import 'package:flutter_picgo/utils/strategy/impl/codeberg_image_upload.dart';
 
 class UploadStrategyFactory {
   static Map<String, ImageUploadStrategy> cache = {};
@@ -47,6 +48,10 @@ class UploadStrategyFactory {
       } else if (type == PBTypeKeys.upyun) {
         /// 又拍云
         cache[type] = new UpyunImageUpload();
+      }
+        /// Codeberg
+      } else if (type == PBTypeKeys.codeberg) {
+        cache[type] = new CodebergImageUpload();
       }
     }
     return cache[type];
