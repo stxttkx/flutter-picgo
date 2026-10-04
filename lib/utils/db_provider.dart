@@ -103,6 +103,10 @@ class DbProvider {
     await db.rawInsert(
         'INSERT INTO $TABLE_NAME_PBSETTING(type, path, name, config, visible) VALUES("${PBTypeKeys.qiniu}", "/setting/pb/qiniu", "七牛图床", NULL, 1)');
 
+    /// Codeberg图床
+    await db.rawInsert(
+        'INSERT INTO $TABLE_NAME_PBSETTING(type, path, name, config, visible) VALUES("${PBTypeKeys.codeberg}", "/setting/pb/codeberg", "Codeberg图床", NULL, 1)');
+    
     /// 阿里云OSS
     await db.rawInsert(
         'INSERT INTO $TABLE_NAME_PBSETTING(type, path, name, config, visible) VALUES("${PBTypeKeys.aliyun}", "/setting/pb/aliyun", "阿里云OSS图床", NULL, 1)');
