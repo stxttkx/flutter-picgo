@@ -24,6 +24,11 @@ import 'package:flutter_picgo/views/picgo_setting_page/picgo_setting_page.dart';
 import 'package:flutter_picgo/views/setting_page/setting_page.dart';
 import 'package:flutter_picgo/views/404.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
+import 'package:flutter_picgo/views/pb_setting_page/codeberg_page/codeberg_page.dart';
+
+// 在 pbsettingGithubHandler 后面加
+
+
 
 var appHandler = new Handler(
   handlerFunc: (BuildContext context, Map<String, List<String>> params) {
@@ -117,6 +122,11 @@ var pbsettingGiteeRepoHandler = new Handler(
           : Uri.decodeComponent(prePath),
     );
   },
+);
+
+var pbsettingCodebergHandler = new Handler(
+  handlerFunc: (BuildContext context, Map<String, List<String>> params) =>
+      CodebergPage(),
 );
 
 // 七牛图床设置页面
