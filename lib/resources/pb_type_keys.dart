@@ -7,6 +7,8 @@ class PBTypeKeys {
 
   static const qiniu = 'qiniu';
 
+  static const codeberg = 'codeberg';
+
   static const aliyun = 'aliyun';
 
   static const tcyun = 'tcyun';
